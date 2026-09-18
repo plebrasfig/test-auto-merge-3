@@ -5,11 +5,6 @@ updates:
     schedule:
       interval: daily
     ignore:
-      - dependency-name: "trim-newlines"
-        update-types:
-          - "version-update:semver-patch"
-          - "version-update:semver-minor"
-          - "version-update:semver-major"
       - dependency-name: "minimist"
         update-types:
           - "version-update:semver-patch"
