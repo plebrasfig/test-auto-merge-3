@@ -1,0 +1,26 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+    ignore:
+      - dependency-name: "trim-newlines"
+        update-types:
+          - "version-update:semver-patch"
+          - "version-update:semver-minor"
+          - "version-update:semver-major"
+    groups:
+      security-patch-minor:
+        applies-to: security-updates
+        patterns:
+          - "*"
+        update-types:
+          - patch
+          - minor
+      security-major:
+        applies-to: security-updates
+        patterns:
+          - "*"
+        update-types:
+          - major
